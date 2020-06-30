@@ -1,10 +1,8 @@
 ﻿using Gifter.Data;
 using Gifter.Models;
 using Microsoft.EntityFrameworkCore;
-using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Threading.Tasks;
 
 namespace Gifter.Repositories
 {
@@ -28,14 +26,6 @@ namespace Gifter.Repositories
             return _context.UserProfile
                            .FirstOrDefault(u => u.Id == id);
         }
-
-        //public List<UserProfile> GetByUserProfileId(int id)
-        //{
-        //    return _context.UserProfile.Include(p => p.UserProfile)
-        //                        .Where(p => p.UserProfileId == id)
-        //                        .OrderBy(p => p.Title)
-        //                        .ToList();
-        //}
 
         public void Add(UserProfile userProfile)
         {

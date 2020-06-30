@@ -1,11 +1,6 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
-using Gifter.Data;
+﻿using Gifter.Data;
 using Gifter.Models;
 using Gifter.Repositories;
-using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 
 namespace Gifter.Controllers
@@ -36,12 +31,6 @@ namespace Gifter.Controllers
             }
             return Ok(userProfile);
         }
-
-        //[HttpGet("getbyuser/{id}")]
-        //public IActionResult GetByUser(int id)
-        //{
-        //    return Ok(_userProfileRepository.GetByUserProfileId(id));
-        //}
 
         [HttpPost]
         public IActionResult Post(UserProfile userProfile)
