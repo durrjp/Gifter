@@ -3,7 +3,6 @@ import { Card, CardImg, CardBody } from "reactstrap";
 import Comment from "./comments/Comment.js"
 
 const Post = ({ post }) => {
-    debugger
   return (
     <Card className="m-4">
       <p className="text-left px-2">Posted by: {post.userProfile.name}</p>

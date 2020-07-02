@@ -23,28 +23,30 @@ const PostForm = (props) => {
     }
 
   return (
-    <Form>
-      <FormGroup>
-        <Label for="newTitle">Title</Label>
-        <Input type="text" name="Title" id="newTitle" placeholder="title" innerRef={title} />
-      </FormGroup>
-      <FormGroup>
-        <Label for="newImage">Image URL</Label>
-        <Input type="text" name="Image" id="newImage" placeholder="image url" innerRef={imageURL} />
-      </FormGroup>
-      <FormGroup>
-        <Label for="newCaption">Caption</Label>
-        <Input type="textarea" name="Caption" id="newCaption" innerRef={caption} />
-      </FormGroup>
-      <FormGroup>
-        <Label for="newUpId">User Profile Id</Label>
-        <Input type="number" name="upId" id="newUpId" innerRef={userId} />
-      </FormGroup>
-      <Button onClick={(e) => {
-          e.preventDefault()
-          constructNewPost()
-      }}>Submit</Button>
-    </Form>
+    <div className="container">
+        <Form>
+        <FormGroup>
+            <Label for="newTitle">Title</Label>
+            <Input type="text" name="Title" id="newTitle" placeholder="title" innerRef={title} />
+        </FormGroup>
+        <FormGroup>
+            <Label for="newImage">Image URL</Label>
+            <Input type="text" name="Image" id="newImage" placeholder="image url" innerRef={imageURL} />
+        </FormGroup>
+        <FormGroup>
+            <Label for="newCaption">Caption</Label>
+            <Input type="textarea" name="Caption" id="newCaption" innerRef={caption} />
+        </FormGroup>
+        <FormGroup>
+            <Label for="newUpId">User Profile Id</Label>
+            <Input type="number" name="upId" id="newUpId" innerRef={userId} />
+        </FormGroup>
+        <Button onClick={(e) => {
+            e.preventDefault()
+            constructNewPost()
+        }}>Submit</Button>
+        </Form>
+    </div>
   );
 }
 

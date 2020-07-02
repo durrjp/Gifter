@@ -10,14 +10,27 @@ const PostList = () => {
     getAllPosts();
   }, []);
 
-  useEffect(() => {
-    if (search.current.value !== "") {
-        searchPosts(search.current.value)
-    }
-    else if(search.current.value !== []) {
-        getAllPosts()
-    }
-}, [searchTerm])
+    const debounce = (func, wait) => {
+        let timeout;
+    
+        return function executedFunction(...args) {
+        const later = () => {
+            timeout = null;
+            func(...args);
+        };
+    
+        clearTimeout(timeout);
+        timeout = setTimeout(later, wait);
+        };
+    };
+
+    const startSearching = debounce(() => {
+        if (search.current.value === "") {
+            getAllPosts();
+        } else {
+            searchPosts(search.current.value);
+        }
+    }, 800);
 
   return (
     <>
@@ -26,7 +39,7 @@ const PostList = () => {
             type="text"
             ref={search}
             className="inputSearch"
-            onKeyUp={ e => setSearchTerm(search.current.value) }
+            onKeyUp={ e => startSearching() }
             name="userSearch"
             placeholder="Search here"
         />
