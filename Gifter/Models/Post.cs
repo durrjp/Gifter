@@ -23,7 +23,7 @@ namespace Gifter.Models
         public int UserProfileId { get; set; }
 
         public UserProfile UserProfile { get; set; }
-        [Required]
+        
         public List<Comment> CommentsOnPost { get; set; }
     }
 }
