@@ -1,7 +1,9 @@
 import React from "react";
 import { Card, CardImg, CardBody } from "reactstrap";
+import Comment from "./comments/Comment.js"
 
 const Post = ({ post }) => {
+    debugger
   return (
     <Card className="m-4">
       <p className="text-left px-2">Posted by: {post.userProfile.name}</p>
@@ -11,6 +13,12 @@ const Post = ({ post }) => {
           <strong>{post.title}</strong>
         </p>
         <p>{post.caption}</p>
+        <p>Comments:</p>
+        {
+            post.commentsOnPost.map(comment => {
+                return <Comment comment={comment} />
+            })
+        }
       </CardBody>
     </Card>
   );

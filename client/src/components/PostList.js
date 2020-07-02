@@ -14,11 +14,10 @@ const PostList = () => {
     if (search.current.value !== "") {
         searchPosts(search.current.value)
     }
-    if(search.current.value !== []) {
+    else if(search.current.value !== []) {
         getAllPosts()
     }
 }, [searchTerm])
-
 
   return (
     <>
