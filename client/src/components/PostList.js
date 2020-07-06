@@ -3,7 +3,7 @@ import { PostContext } from "../providers/PostProvider";
 import Post from "./Post";
 
 const PostList = () => {
-  const { posts, getAllPosts, setSearchTerm, searchTerm, searchPosts } = useContext(PostContext);
+  const { posts, getAllPosts, searchPosts } = useContext(PostContext);
   const search = useRef("")
 
   useEffect(() => {
