@@ -45,5 +45,11 @@ namespace Gifter.Repositories
             _context.UserProfile.Remove(userProfile);
             _context.SaveChanges();
         }
+
+        public UserProfile GetByFirebaseUserId(string firebaseUserId)
+        {
+            return _context.UserProfile
+                .FirstOrDefault(up => up.FirebaseUserId == firebaseUserId);
+        }
     }
 }

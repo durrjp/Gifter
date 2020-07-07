@@ -1,7 +1,9 @@
-import React from "react";
+import React, {useContext} from "react";
 import { Link } from "react-router-dom";
+import { UserProfileContext } from "../providers/UserProfileProvider";
 
 const Header = () => {
+  const { logout } = useContext(UserProfileContext);
   return (
     <nav className="navbar navbar-expand navbar-dark bg-info">
       <Link to="/" className="navbar-brand">
@@ -17,6 +19,11 @@ const Header = () => {
           <Link to="/posts/add" className="nav-link">
             New Post
           </Link>
+        </li>
+        <li className="nav-item">
+          <button onClick={(e) => {
+            e.preventDefault() 
+            logout()}}>Logout</button>
         </li>
       </ul>
     </nav>
