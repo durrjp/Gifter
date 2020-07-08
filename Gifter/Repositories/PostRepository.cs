@@ -27,8 +27,8 @@ namespace Gifter.Repositories
         public Post GetById(int id)
         {
             return _context.Post
+                           .Include(p => p.CommentsOnPost)
                            .Include(p => p.UserProfile)
-                           .Include(c => c.CommentsOnPost)
                            .FirstOrDefault(p => p.Id == id);
         }
 

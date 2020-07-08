@@ -10,7 +10,7 @@ export const PostProvider = (props) => {
 
   const getAllPosts = () => {
     getToken().then((token) => 
-    fetch("api/post", {
+    fetch("/api/post", {
       method: "GET",
       headers: {
         Authorization:  `Bearer ${token}`
@@ -19,21 +19,21 @@ export const PostProvider = (props) => {
       .then(setPosts));
   }
 
-  const addPost = (post) => {
+  const addPost = (post) => (
     getToken().then((token) =>
-    fetch("api/post", {
+    fetch("/api/post", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
         Authorization: `Bearer ${token}`
       },
       body: JSON.stringify(post),
-    }));
-  };
+    }))
+  );
 
   const searchPosts = (searchTerm) => {
     getToken().then((token) =>
-    fetch(`api/post/search?q=${searchTerm}`, {
+    fetch(`/api/post/search?q=${searchTerm}`, {
       method: "GET",
       headers: {
         Authorization:  `Bearer ${token}`
@@ -43,7 +43,7 @@ export const PostProvider = (props) => {
         .then(setPosts));
   };
 
-  const getPost = (id) => {
+  const getPost = (id) => (
     getToken().then((token) =>
     fetch(`/api/post/${id}`, {
       method: "GET",
@@ -52,7 +52,7 @@ export const PostProvider = (props) => {
       }
       }))
         .then((res) => res.json())  
-  }
+  )
 
   const getPostByUser = (id) => {
     getToken().then((token) =>

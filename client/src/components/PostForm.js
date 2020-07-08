@@ -7,7 +7,6 @@ const PostForm = (props) => {
     const title = useRef()
     const imageURL = useRef()
     const caption = useRef()
-    const userId = useRef()
     // Use this hook to allow us to programatically redirect users
     const history = useHistory();
 
@@ -19,7 +18,6 @@ const PostForm = (props) => {
             imageURL: imageURL.current.value,
             caption: caption.current.value,
             dateCreated: new Date(),
-            userProfileId: userId.current.value
         }
 
         addPost(newPostObject).then((p) => {
@@ -46,10 +44,6 @@ const PostForm = (props) => {
                         <FormGroup>
                             <Label for="newCaption">Caption</Label>
                             <Input type="textarea" name="Caption" id="newCaption" innerRef={caption} />
-                        </FormGroup>
-                        <FormGroup>
-                            <Label for="newUpId">User Profile Id</Label>
-                            <Input type="number" name="upId" id="newUpId" innerRef={userId} />
                         </FormGroup>
                         <Button onClick={(e) => {
                             e.preventDefault()

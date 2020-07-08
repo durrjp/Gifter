@@ -29,7 +29,7 @@ namespace Gifter
             services.AddControllers()
                     .AddNewtonsoftJson(options =>
                         options.SerializerSettings.ReferenceLoopHandling = ReferenceLoopHandling.Ignore
-                    );
+            );
             var firebaseProjectId = Configuration.GetValue<string>("FirebaseProjectId");
             var googleTokenUrl = $"https://securetoken.google.com/{firebaseProjectId}";
             services
@@ -45,7 +45,7 @@ namespace Gifter
                         ValidAudience = firebaseProjectId,
                         ValidateLifetime = true
                     };
-                });
+             });
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
