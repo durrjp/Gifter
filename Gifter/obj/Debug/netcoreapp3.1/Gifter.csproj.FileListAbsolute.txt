@@ -1,4 +1,3 @@
-C:\Users\durrj\workspace\Gifter\Gifter\obj\Debug\netcoreapp3.1\Gifter.csprojAssemblyReference.cache
 C:\Users\durrj\workspace\Gifter\Gifter\obj\Debug\netcoreapp3.1\Gifter.AssemblyInfoInputs.cache
 C:\Users\durrj\workspace\Gifter\Gifter\obj\Debug\netcoreapp3.1\Gifter.AssemblyInfo.cs
 C:\Users\durrj\workspace\Gifter\Gifter\bin\Debug\netcoreapp3.1\appsettings.Development.json
@@ -156,3 +155,4 @@ C:\Users\durrj\workspace\Gifter\Gifter\bin\Debug\netcoreapp3.1\Microsoft.Identit
 C:\Users\durrj\workspace\Gifter\Gifter\bin\Debug\netcoreapp3.1\System.IdentityModel.Tokens.Jwt.dll
 C:\Users\durrj\workspace\Gifter\Gifter\obj\Debug\netcoreapp3.1\Gifter.csproj.CoreCompileInputs.cache
 C:\Users\durrj\workspace\Gifter\Gifter\obj\Debug\netcoreapp3.1\Gifter.MvcApplicationPartsAssemblyInfo.cache
+C:\Users\durrj\workspace\Gifter\Gifter\obj\Debug\netcoreapp3.1\Gifter.csprojAssemblyReference.cache
